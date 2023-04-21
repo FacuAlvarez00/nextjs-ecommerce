@@ -4,3 +4,13 @@
   padding: 0;
   margin: 0;
 }
+
+.product__container{
+  display: flex;
+  
+}
+.product img{
+  width: 250px;
+  height: 250px;
+
+}

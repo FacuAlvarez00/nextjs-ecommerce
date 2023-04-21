@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 
+
 type productList = {
     productData: any
   }
@@ -26,14 +27,17 @@ const index = ({ productData }: productList)=> {
   return (
     
 
-    <div>
+    <div className='product__container'>
         
 
-          {productData.map((product: any) => (
-            <>
-                <h1>{product.title}</h1>
+          {productData.slice(0, 6).map((product: any) => (
+            <div className='product'>
+                <h3>{product.title}</h3>
+                <p>{product.description}</p>
+                <p>{product.price}</p>
+                <img src={product.image} alt={product.title} />
                     <Link href={`/products/${product.id}`}>Detail</Link>
-            </>
+            </div>
  
 
     ))}
